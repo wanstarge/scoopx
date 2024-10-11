@@ -7,8 +7,9 @@ jobs:
     name: IssueHandler
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@main
-      - name: IssueHandler
+      - name: '读取仓库内容'
+        uses: actions/checkout@main
+      - name: '处理问题'
         uses: ScoopInstaller/GithubActions@main
         if: github.event.action == 'opened' || (github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'verify'))
         env:

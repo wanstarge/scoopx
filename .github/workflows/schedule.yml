@@ -9,8 +9,9 @@ jobs:
     name: Excavate
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@main
-      - name: Excavate
+      - name: '读取仓库内容'
+        uses: actions/checkout@main
+      - name: '更新仓库'
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
