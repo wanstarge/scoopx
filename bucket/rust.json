@@ -1,0 +1,51 @@
+{
+    "version": "1.81.0",
+    "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
+    "homepage": "https://www.rust-lang.org",
+    "license": "MIT|Apache-2.0",
+    "notes": [
+        "Use the rustup package instead for easier management of multiple toolchains, including beta/nightly releases.",
+        "According to https://doc.rust-lang.org/book/ch01-01-installation.html#installing-rustup-on-windows",
+        "Microsoft C++ Build Tools is needed and can be downloaded here: https://visualstudio.microsoft.com/visual-cpp-build-tools/",
+        "When installing build tools, these two components should be selected:",
+        "- MSVC - VS C++ x64/x86 build tools",
+        "- Windows SDK"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://static.rust-lang.org/dist/rust-1.81.0-x86_64-pc-windows-msvc.msi",
+            "hash": "2c956fb4f4a994e525fdc43d8c82fc76f89daf5a64641e334cc02f87b2b8eae3"
+        },
+        "32bit": {
+            "url": "https://static.rust-lang.org/dist/rust-1.81.0-i686-pc-windows-msvc.msi",
+            "hash": "dfe95f0345ba64673521fa310d33d2e5b613d21bf8419aef92460fc56eb1423b"
+        },
+        "arm64": {
+            "url": "https://static.rust-lang.org/dist/rust-1.81.0-aarch64-pc-windows-msvc.msi",
+            "hash": "7c449e33bdfd65b02610a9627ec60a9e5b38489b1f866d7d3de5b3956f778a21"
+        }
+    },
+    "extract_dir": "Rust",
+    "bin": [
+        "bin\\rustc.exe",
+        "bin\\rustdoc.exe",
+        "bin\\cargo.exe"
+    ],
+    "checkver": "Version ([\\d.]+)",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://static.rust-lang.org/dist/rust-$version-x86_64-pc-windows-msvc.msi"
+            },
+            "32bit": {
+                "url": "https://static.rust-lang.org/dist/rust-$version-i686-pc-windows-msvc.msi"
+            },
+            "arm64": {
+                "url": "https://static.rust-lang.org/dist/rust-$version-aarch64-pc-windows-msvc.msi"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
