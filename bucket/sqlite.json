@@ -2,9 +2,7 @@
     "version": "3.46.1",
     "description": "A small, fast, self-contained, high-reliability and full-featured SQL database engine",
     "homepage": "https://www.sqlite.org/",
-    "license": {
-        "url": "https://www.sqlite.org/src/file?name=LICENSE.md"
-    },
+    "license": "https://www.sqlite.org/src/file?name=LICENSE.md",
     "architecture": {
         "64bit": {
             "url": "https://www.sqlite.org/2024/sqlite-tools-win-x64-3460100.zip",
