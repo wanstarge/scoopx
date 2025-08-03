@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: '读取仓库内容'
-        uses: actions/checkout@main
+        uses: actions/checkout@v4
       - name: '更新仓库'
         uses: ScoopInstaller/GithubActions@main
         env:
